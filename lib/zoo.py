@@ -28,7 +28,7 @@ class Zoo:
     # Instance methods
 
     def animals(self):
-        results = [animal for animal in cls.all if animal.zoo == self]
+        results = [animal for animal in Animal.all if animal.zoo == self]
         if results: return results
         return "No animals at that zoo yet!"
     
