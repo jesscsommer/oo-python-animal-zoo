@@ -20,7 +20,7 @@ class Zoo:
     
     @classmethod
     def find_by_location(cls, location):
-        results = [zoo for zoo in Zoo.all 
+        results = [zoo for zoo in cls.all 
                     if zoo.location.lower() == location.lower()]
         if results: return results
         return "No zoos at that location!"
@@ -28,7 +28,7 @@ class Zoo:
     # Instance methods
 
     def animals(self):
-        results = [animal for animal in Animal.all if animal.zoo == self]
+        results = [animal for animal in cls.all if animal.zoo == self]
         if results: return results
         return "No animals at that zoo yet!"
     
